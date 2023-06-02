@@ -3,6 +3,7 @@
 
     import { ref } from "vue"
 
+    // If done is true, list component behaves as a list of completed tasks.
     const props = defineProps({
         tasks: Array<string>,
         done: Boolean
@@ -42,6 +43,7 @@
 
     p, label {
         place-self: center;
+        padding: 0.25rem;
     }
 
     p {
@@ -51,8 +53,6 @@
     }
 
     ol {
-        list-style-type: decimal;
-        list-style-position: inside;
         padding: 0.5rem 1rem 1rem 1rem;
         width: 100%
     }
@@ -65,14 +65,5 @@
         display: flex;
         height: 2.5rem;
         max-height: 2.5rem;
-    }
-
-    XMarkIcon, CheckIcon {
-        display: flex;
-        flex-flow: column;
-        width: 1.75rem;
-        height: 1.75rem;
-        max-height: 1.75rem;
-        max-width: 1.75rem;
     }
 </style>
