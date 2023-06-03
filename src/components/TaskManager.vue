@@ -49,11 +49,11 @@
             <PlusIcon class="w-7 h-7"/>
         </button>
     </header>
-    <main class="md:flex mt-10 space-x-2">
-        <div class="flex-row w-full md:w-1/2 pr-1 mr-4">
+    <main class="md:flex flex-row mt-10">
+        <div class="w-full md:w-1/2 pr-1 mr-4">
             <TaskList @checked="(task) => markCompleted(task)" :tasks="tasks">Tasks: </TaskList>
         </div>
-        <div class="flex-row w-full md:w-1/2 pr-1 mr-4">
+        <div class="w-full md:w-1/2 pr-1 mr-4">
             <TaskList @checked="(task) => markIncomplete(task)" :tasks="completedTasks" done>Completed: </TaskList>
         </div>
     </main>

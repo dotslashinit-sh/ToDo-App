@@ -16,14 +16,13 @@
     <label for="tasks"><slot></slot></label>
     <ol class="space-y-4 list-decimal" id="tasks">
         <li v-for="task of tasks" v-if="!done">
-            <p class="flex-grow w-fit h-fit place-self-center mt-0.5">{{task}}</p>
+            <p class="flex-grow place-self-center">{{task}}</p>
             <button class="p-1 bg-zinc-900 rounded-xl" @click="emit('checked', task)">
                 <CheckIcon class="w-7 h-7 fill-gray-100"></CheckIcon>
             </button>
         </li>
-        <li class="flex bg-zinc-700 max-w-full"
-        v-for="task of tasks" v-else>
-            <p class="flex-grow w-fit h-fit place-self-center mt-0.5 line-through text-gray-500">{{task}}</p>
+        <li v-for="task of tasks" v-else>
+            <p class="flex-grow place-self-center line-through text-gray-500">{{task}}</p>
             <button class="p-1 bg-zinc-900 rounded-xl" @click="emit('checked', task)">
                 <XMarkIcon class="w-7 h-7 fill-gray-100"></XMarkIcon>
             </button>
